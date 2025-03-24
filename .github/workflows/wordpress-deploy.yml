@@ -1,0 +1,51 @@
+name: Deploy WordPress Theme
+
+on:
+  push:
+    branches:
+      - main # Or your primary branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Optional: Build theme assets if needed
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '16'
+      # - name: Install dependencies
+      #   run: npm ci
+      # - name: Build theme
+      #   run: npm run build
+
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
+
+      - name: Deploy to WordPress themes directory
+        env:
+          SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -e rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            --exclude=".git/" \
+            --exclude=".github/" \
+            --exclude="node_modules/" \
+            --exclude=".gitignore" \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/
+
+      - name: Debug secret availability
+        run: |
+          if [ -n "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is set"; else echo "SSH_HOST is NOT set"; fi
+          if [ -n "${{ secrets.SSH_USER }}" ]; then echo "SSH_USER is set"; else echo "SSH_USER is NOT set"; fi
+          if [ -n "${{ secrets.SSH_PASSWORD }}" ]; then echo "SSH_PASSWORD is set"; else echo "SSH_PASSWORD is NOT set"; fi
+
+      # Optional: Clear WordPress cache if using a caching plugin
+      - name: Clear cache
+        env:
+          SSHPASS: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "wp cache flush --path=/var/www/portfolio.lucidica.co.uk/public_html"

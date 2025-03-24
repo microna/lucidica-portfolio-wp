@@ -17,13 +17,11 @@ jobs:
         run: |
           if [ -n "${{ secrets.SSH_HOST }}" ]; then 
             echo "SSH_HOST is set"
-            echo "First character: ${${{ secrets.SSH_HOST }}:0:1}..." # Show first char only
           else 
             echo "SSH_HOST is NOT set" 
           fi
           if [ -n "${{ secrets.SSH_USER }}" ]; then 
             echo "SSH_USER is set"
-            echo "First character: ${${{ secrets.SSH_USER }}:0:1}..." # Show first char only
           else 
             echo "SSH_USER is NOT set" 
           fi
@@ -33,25 +31,24 @@ jobs:
             echo "SSH_PASSWORD is NOT set" 
           fi
 
-      # Debug connection
+      # Install sshpass with sudo
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      # Test SSH connection with proper syntax
       - name: Test SSH connection
         run: |
-          apt-get update && apt-get install -y sshpass
           echo "Attempting to connect to ${{ secrets.SSH_HOST }}..."
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo Connection successful"
 
-      # Install sshpass
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
-
-      # Deploy with verbose output for debugging
+      # Deploy with correct syntax
       - name: Deploy to WordPress themes directory
-        env:
-          SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
           echo "Starting deployment to ${{ secrets.SSH_HOST }}..."
-          sshpass -e rsync -avz --delete \
-            -e "ssh -o StrictHostKeyChecking=no -v" \
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
@@ -59,9 +56,7 @@ jobs:
             ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/subdomain.yourdomain.com/public_html/wp-content/themes/your-theme-name/
           echo "Deployment completed"
       
-      # Optional: Clear WordPress cache if using a caching plugin
+      # Optional: Clear WordPress cache
       - name: Clear cache
-        env:
-          SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "wp cache flush --path=/var/www/subdomain.yourdomain.com/public_html"
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "wp cache flush --path=/var/www/subdomain.yourdomain.com/public_html" || echo "Cache flush failed, but continuing"

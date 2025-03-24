@@ -12,51 +12,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Debug step to verify secrets
-      - name: Debug secret availability
+      # Print debug info about secrets (without revealing them)
+      - name: Check secrets
         run: |
-          if [ -n "${{ secrets.SSH_HOST }}" ]; then 
-            echo "SSH_HOST is set"
-          else 
-            echo "SSH_HOST is NOT set" 
-          fi
-          if [ -n "${{ secrets.SSH_USER }}" ]; then 
-            echo "SSH_USER is set"
-          else 
-            echo "SSH_USER is NOT set" 
-          fi
-          if [ -n "${{ secrets.SSH_PASSWORD }}" ]; then 
-            echo "SSH_PASSWORD is set (value hidden)"
-          else 
-            echo "SSH_PASSWORD is NOT set" 
-          fi
+          if [ -n "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is set"; else echo "SSH_HOST is NOT set"; fi
+          if [ -n "${{ secrets.SSH_USER }}" ]; then echo "SSH_USER is set"; else echo "SSH_USER is NOT set"; fi
+          if [ -n "${{ secrets.SSH_PASSWORD }}" ]; then echo "SSH_PASSWORD is set"; else echo "SSH_PASSWORD is NOT set"; fi
 
-      # Install sshpass with sudo
-      - name: Install sshpass
+      # Use pre-installed sshpass on GitHub runners
+      - name: Test SSH connection (minimal)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y sshpass
+          echo "Testing connection to host: ${{ secrets.SSH_HOST }}"
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" echo "Connection successful"
 
-      # Test SSH connection with proper syntax
-      - name: Test SSH connection
-        run: |
-          echo "Attempting to connect to ${{ secrets.SSH_HOST }}..."
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo Connection successful"
-
-      # Deploy with correct syntax
+      # Deployment step (if connection successful)
       - name: Deploy to WordPress themes directory
         run: |
-          echo "Starting deployment to ${{ secrets.SSH_HOST }}..."
+          echo "Deploying to ${{ secrets.SSH_HOST }}..."
           sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".gitignore" \
-            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/subdomain.yourdomain.com/public_html/wp-content/themes/your-theme-name/
-          echo "Deployment completed"
-      
-      # Optional: Clear WordPress cache
-      - name: Clear cache
-        run: |
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "wp cache flush --path=/var/www/subdomain.yourdomain.com/public_html" || echo "Cache flush failed, but continuing"
+            ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/"

@@ -12,23 +12,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Print debug info about secrets (without revealing them)
-      - name: Check secrets
+      # Print the exact values we're using (but mask sensitive parts)
+      - name: Debug connection string
         run: |
-          if [ -n "${{ secrets.SSH_HOST }}" ]; then echo "SSH_HOST is set"; else echo "SSH_HOST is NOT set"; fi
-          if [ -n "${{ secrets.SSH_USER }}" ]; then echo "SSH_USER is set"; else echo "SSH_USER is NOT set"; fi
-          if [ -n "${{ secrets.SSH_PASSWORD }}" ]; then echo "SSH_PASSWORD is set"; else echo "SSH_PASSWORD is NOT set"; fi
+          echo "User: ${{ secrets.SSH_USER || 'NOT SET' }}"
+          echo "Host: ${{ secrets.SSH_HOST || 'NOT SET' }}"
+          echo "Connection string: ${{ secrets.SSH_USER || 'user' }}@${{ secrets.SSH_HOST || 'host' }}:/path"
+          echo "Password is set: ${{ secrets.SSH_PASSWORD != '' }}"
 
-      # Use pre-installed sshpass on GitHub runners
-      - name: Test SSH connection (minimal)
-        run: |
-          echo "Testing connection to host: ${{ secrets.SSH_HOST }}"
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" echo "Connection successful"
-
-      # Deployment step (if connection successful)
       - name: Deploy to WordPress themes directory
         run: |
-          echo "Deploying to ${{ secrets.SSH_HOST }}..."
+          # Check if required secrets are set
+          if [ -z "${{ secrets.SSH_USER }}" ]; then
+            echo "Error: SSH_USER secret is not set"
+            exit 1
+          fi
+          
+          if [ -z "${{ secrets.SSH_HOST }}" ]; then
+            echo "Error: SSH_HOST secret is not set"
+            exit 1
+          fi
+          
+          if [ -z "${{ secrets.SSH_PASSWORD }}" ]; then
+            echo "Error: SSH_PASSWORD secret is not set"
+            exit 1
+          fi
+          
+          echo "Deploying to ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/"
+          
           sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             --exclude=".git/" \

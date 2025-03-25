@@ -1,0 +1,33 @@
+# Ignore GitHub workflow directory
+.github/
+
+# WordPress core files to ignore
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/cache/
+wp-content/backups/
+
+# Ignore common development files
+node_modules/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+*.sql
+*.sqlite
+
+# Dependency directories
+/vendor/
+/bower_components/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build files
+/build/
+/dist/ 

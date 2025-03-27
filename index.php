@@ -197,7 +197,7 @@
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/rasheed.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/Rasheed.jpg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">

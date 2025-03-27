@@ -191,20 +191,22 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">Business Owner </div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Rasheed Ogunlaru
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/rasheed.jpg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    "Lucidica understands small businesses from one person start-ups to growing SMEs.
+                    It’s this combined with their passion for IT and their personable, friendly team that make them
+                    stand out. I’ve used their services from IT support..."
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
 
 
@@ -218,9 +220,9 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">GREET THERAPIES</div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            WILLIAM ANDREWS
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
@@ -228,10 +230,13 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    “The seminar gave me an appetite to improve my IT facilities and website. The afternoon was full of
+                    interesting facts and information that I found was all relevant to running my business. It was well
+                    worth the money and I’d recommend these seminars to anyone looking to make the most of their
+                    business.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
             <div class="swiper-slide testimonials__slider-item">
                 <div class="testimonials__wrapper">
@@ -243,20 +248,25 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">Daks Simpson LTD
+                        </div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Vicki French
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/daks.png" alt="">
                     </div>
                 </div>
-                <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                <div class=" testimonials__slider-text">
+                    “We highly recommend Lucidica. We do not have in house IT and I have to say the response time,
+                    the
+                    assistance, the support and professionalism from all the team at Lucida are excellent. All
+                    issues
+                    are dealt with very quickly. I cannot fault Lucidica at all.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
             <div class="swiper-slide testimonials__slider-item">
                 <div class="testimonials__wrapper">
@@ -268,20 +278,24 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">eatbigfish</div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Rosie Dean, Office Manager
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/rosie.jpg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    “We have used Lucidica as our IT support for several years and are very happy with the service
+                    they
+                    provide. Not only do they handle our day to day enquires efficiently, Lucidica have helped us
+                    with
+                    large tasks such as changing document management platforms and a major IT security update.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
             <div class="swiper-slide testimonials__slider-item">
                 <div class="testimonials__wrapper">
@@ -293,20 +307,22 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">GIAN Consulting</div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Ranbir Toor, Director
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/ranbir.jpeg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    “To me, they are an extension of my own business and it’s what I value most. I can’t recommend
+                    their
+                    people and services more highly.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
             <div class="swiper-slide testimonials__slider-item">
                 <div class="testimonials__wrapper">
@@ -318,20 +334,23 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">PlusX</div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Matt Hunter, CEO
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/matt_hunter.jpg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    “Lucidica helped Plus X to combine data from various cloud platforms and migrate safely to
+                    Microsoft365. Microsoft Teams, in particular, has proved extremely effective in helping our team
+                    to
+                    collaborate across our various locations.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
             <div class="swiper-slide testimonials__slider-item">
                 <div class="testimonials__wrapper">
@@ -343,20 +362,23 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                             <img src="<?php echo get_template_directory_uri(); ?>/img/star.svg" alt="star" />
                         </div>
-                        <div class="testimonials__slider-subtitle">CEO</div>
+                        <div class="testimonials__slider-subtitle">Williams Mining</div>
                         <div class="testimonials__slider-title">
-                            User Name
+                            Derek Williams, Director
                         </div>
                     </div>
                     <div class="testimonials__slider-content--image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/user-img.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/derek.jpeg" alt="">
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                    “I’ve been a customer of Lucidica for nearly five years and have found them to be consistent,
+                    patient and efficient. They’ve supported my business with every type of IT enquiry and have been
+                    reliable in their delivery of service. I’ve been impressed by their aftercare consultative
+                    approach.”
                 </div>
-                <a href="#" class="button-secondary">Read More</a>
+                <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
+                    More</a>
             </div>
         </div>
 

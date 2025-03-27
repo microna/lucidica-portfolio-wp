@@ -2750,7 +2750,8 @@ footer .ellipse-wrapper-footer div img {
   }
 }
 
-.testimonials__slider-item {
+.testimonials__slider-item,
+.projects__slider-item{
   display: flex !important;
   flex-direction: column !important;
   align-content: center !important;

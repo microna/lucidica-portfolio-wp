@@ -74,46 +74,44 @@
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
                     alt="" />
-                <h5 class="projects__slider-title">Project 2</h5>
+                <h5 class="projects__slider-title">Eldin Risk</h5>
                 <p class="projects__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                    quos.
+                    Website fully build with the Webflow builder and contant the CMS integration for managing posts on
+                    the website
                 </p>
             </div>
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
                     alt="" />
-                <h5 class="projects__slider-title">Project 3</h5>
+                <h5 class="projects__slider-title">Athenaeumn partners</h5>
                 <p class="projects__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                    quos.
+                    Clean and modern website build with the Wodpress. Illustration and animation were added to the
+                    website to make it more engaging and interactive.
                 </p>
             </div>
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
                     alt="" />
-                <h5 class="projects__slider-title">Project 4</h5>
+                <h5 class="projects__slider-title">Seable Holidays Website</h5>
                 <p class="projects__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                    quos.
+                    Website developed following all accesabilities guidelines and built with the Wordpress engine. This
+                    website contains the different events and posts to interract with.
                 </p>
             </div>
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
                     alt="" />
-                <h5 class="projects__slider-title">Project 5</h5>
+                <h5 class="projects__slider-title">Squarebook website</h5>
                 <p class="projects__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                    quos.
+                    Fully custom solution for our clients - theme build from scratch with the cooperatin of designers.
                 </p>
             </div>
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
                     alt="" />
-                <h5 class="projects__slider-title">Project 6</h5>
+                <h5 class="projects__slider-title">Stage Cap Website</h5>
                 <p class="projects__slider-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                    quos.
+                    Nice and clean website build with the Wordpress engine.
                 </p>
             </div>
         </div>

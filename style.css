@@ -616,6 +616,11 @@ body.dark {
   padding-bottom: 106px !important;
 }
 
+.projects__slider-img{
+  width: 320px;
+    height: 200px;
+}
+
 .projects__slider .swiper {
   overflow: visible;
   margin-left: -30px;
@@ -2751,7 +2756,7 @@ footer .ellipse-wrapper-footer div img {
 }
 
 .testimonials__slider-item,
-.projects__slider-item{
+.projects__slider-item {
   display: flex !important;
   flex-direction: column !important;
   align-content: center !important;

@@ -49,7 +49,61 @@
 </div>
 <!-- <a href="#" class="btn modal__btn modal__close">Open modal</a> -->
 
+
 <section class="project-item">
+    <div class="container">
+        <h2 class="hero__title">Design Process</h2>
+
+        <?php 
+        // Debug: Check if ACF function exists
+        if( !function_exists('get_field') ) {
+            echo '<p>ACF is not active</p>';
+        }
+        
+        // Debug: Check if the repeater field exists
+        if( get_field('design_process') === null ) {
+            echo '<p>Field "design_process" not found</p>';
+        }
+        
+        $rows = get_field('design_process');
+        if( have_rows('design_process') ): ?>
+        <?php while( have_rows('design_process') ): the_row(); 
+                $image = get_sub_field('desing_process_image');
+                $title = get_sub_field('desing_process_title');
+                $text = get_sub_field('desing_process_text');
+            ?>
+        <div class="project-item__content">
+            <div class="project-item__image">
+                <?php if($image): ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php else: ?>
+                <p>No image found</p>
+                <?php endif; ?>
+            </div>
+            <div class="project-item__text">
+                <?php if($title): ?>
+                <h3 class="project-item__title title-underline"><?php echo $title; ?></h3>
+                <?php else: ?>
+                <p>No title found</p>
+                <?php endif; ?>
+                <?php if($text): ?>
+                <div class="project-item__description">
+                    <?php echo $text; ?>
+                </div>
+                <?php else: ?>
+                <p>No text found</p>
+                <?php endif; ?>
+            </div>
+        </div>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <p>No design process items found. Check your field group settings.</p>
+        <?php endif; ?>
+
+    </div>
+</section>
+
+<!-- <section class="project-item">
     <div class="container">
         <h2 class="hero__title">Design Process</h2>
         <div class="project-item__content">
@@ -315,6 +369,6 @@
         <h2 class="hero__title">Want One?</h2>
         <a href="" class="button-primary modal__btn">Quick free consultation</a>
     </div>
-</div>
+</div> -->
 
 <?php get_footer(); ?>

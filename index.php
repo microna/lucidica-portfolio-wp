@@ -62,58 +62,37 @@
     </div>
     <div class="swiper projects__slider">
         <div class="swiper-wrapper">
+            <?php
+            $args = array(
+                'post_type' => 'project',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
+            
+            $projects_query = new WP_Query($args);
+            
+            if ($projects_query->have_posts()) :
+                while ($projects_query->have_posts()) : $projects_query->the_post();
+                    // Get the featured image
+                    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    if (!$thumbnail) {
+                        $thumbnail = get_template_directory_uri() . '/img/project-1.jpg'; // Fallback image
+                    }
+            ?>
             <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Lucidica Website</h5>
+                <img class="projects__slider-img" src="<?php echo esc_url($thumbnail); ?>"
+                    alt="<?php echo esc_attr(get_the_title()); ?>" />
+                <h5 class="projects__slider-title"><?php echo esc_html(get_the_title()); ?></h5>
                 <p class="projects__slider-text">
-                    We developed a WordPress website for Lucidica, providing a modern, user-friendly, and
-                    performance-optimized platform
+                    <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                 </p>
             </div>
-            <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Eldin Risk</h5>
-                <p class="projects__slider-text">
-                    Website fully build with the Webflow builder and contant the CMS integration for managing posts on
-                    the website
-                </p>
-            </div>
-            <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Athenaeumn partners</h5>
-                <p class="projects__slider-text">
-                    Clean and modern website build with the Wodpress. Illustration and animation were added to the
-                    website to make it more engaging and interactive.
-                </p>
-            </div>
-            <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Seable Holidays Website</h5>
-                <p class="projects__slider-text">
-                    Website developed following all accesabilities guidelines and built with the Wordpress engine. This
-                    website contains the different events and posts to interract with.
-                </p>
-            </div>
-            <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Squarebook website</h5>
-                <p class="projects__slider-text">
-                    Fully custom solution for our clients - theme build from scratch with the cooperatin of designers.
-                </p>
-            </div>
-            <div class="swiper-slide projects__slider-item">
-                <img class="projects__slider-img" src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg"
-                    alt="" />
-                <h5 class="projects__slider-title">Stage Cap Website</h5>
-                <p class="projects__slider-text">
-                    Nice and clean website build with the Wordpress engine.
-                </p>
-            </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
         </div>
     </div>
     <div class="container">
@@ -200,8 +179,8 @@
                 </div>
                 <div class="testimonials__slider-text">
                     "Lucidica understands small businesses from one person start-ups to growing SMEs.
-                    It’s this combined with their passion for IT and their personable, friendly team that make them
-                    stand out. I’ve used their services from IT support..."
+                    It's this combined with their passion for IT and their personable, friendly team that make them
+                    stand out. I've used their services from IT support..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -228,10 +207,10 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    “The seminar gave me an appetite to improve my IT facilities and website. The afternoon was full of
+                    "The seminar gave me an appetite to improve my IT facilities and website. The afternoon was full of
                     interesting facts and information that I found was all relevant to running my business. It was well
-                    worth the money and I’d recommend these seminars to anyone looking to make the most of their
-                    business.”
+                    worth the money and I'd recommend these seminars to anyone looking to make the most of their
+                    business."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -257,11 +236,11 @@
                     </div>
                 </div>
                 <div class=" testimonials__slider-text">
-                    “We highly recommend Lucidica. We do not have in house IT and I have to say the response time,
+                    "We highly recommend Lucidica. We do not have in house IT and I have to say the response time,
                     the
                     assistance, the support and professionalism from all the team at Lucida are excellent. All
                     issues
-                    are dealt with very quickly. I cannot fault Lucidica at all.”
+                    are dealt with very quickly. I cannot fault Lucidica at all."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -286,11 +265,11 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    “We have used Lucidica as our IT support for several years and are very happy with the service
+                    "We have used Lucidica as our IT support for several years and are very happy with the service
                     they
                     provide. Not only do they handle our day to day enquires efficiently, Lucidica have helped us
                     with
-                    large tasks such as changing document management platforms and a major IT security update.”
+                    large tasks such as changing document management platforms and a major IT security update."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -315,9 +294,9 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    “To me, they are an extension of my own business and it’s what I value most. I can’t recommend
+                    "To me, they are an extension of my own business and it's what I value most. I can't recommend
                     their
-                    people and services more highly.”
+                    people and services more highly."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -342,10 +321,10 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    “Lucidica helped Plus X to combine data from various cloud platforms and migrate safely to
+                    "Lucidica helped Plus X to combine data from various cloud platforms and migrate safely to
                     Microsoft365. Microsoft Teams, in particular, has proved extremely effective in helping our team
                     to
-                    collaborate across our various locations.”
+                    collaborate across our various locations."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -370,10 +349,10 @@
                     </div>
                 </div>
                 <div class="testimonials__slider-text">
-                    “I’ve been a customer of Lucidica for nearly five years and have found them to be consistent,
-                    patient and efficient. They’ve supported my business with every type of IT enquiry and have been
-                    reliable in their delivery of service. I’ve been impressed by their aftercare consultative
-                    approach.”
+                    "I've been a customer of Lucidica for nearly five years and have found them to be consistent,
+                    patient and efficient. They've supported my business with every type of IT enquiry and have been
+                    reliable in their delivery of service. I've been impressed by their aftercare consultative
+                    approach."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>

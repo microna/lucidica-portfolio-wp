@@ -151,7 +151,7 @@ function lucidica_register_project_taxonomy() {
 }
 
 add_theme_support('post-thumbnails');
-
+add_image_size('project-thumbnail', 320, 200, true);
 // Hook the functions to WordPress
 add_action('wp_enqueue_scripts', 'get_lucidica_portfolio_styles');
 add_action('wp_enqueue_scripts', 'get_lucidica_portfolio_scripts');

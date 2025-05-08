@@ -51,19 +51,46 @@
     <div class="container">
         <div class="projects__wrapper">
 
+
+            <?php
+            // Standard WordPress loop
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    // Get the featured image
+                    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'project-thumbnail');
+                    if (!$thumbnail) {
+                        $thumbnail = get_template_directory_uri() . '/img/project-1.jpg'; // Fallback image
+                    }
+                    ?>
             <div class="project__item">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/project-1.jpg" alt="project__item-img" />
-                 
+                <div class="project__item-image-wrapper">
+                    <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"
+                        loading="lazy" />
+                </div>
                 <div class="project-holder">
                     <div class="">
                         <p class="project__item-subtitle">Website</p>
-                        <p class="project__item-title">Lucidica</p>
+                        <p class="project__item-title"><?php echo esc_html(get_the_title()); ?></p>
                     </div>
                     <div class="">
-                        <a href="<?php the_permalink(); ?>" class="button-secondary modal__btn">Read More</a>
+                        <a href="<?php the_permalink(); ?>" class="button-secondary">Read More</a>
                     </div>
                 </div>
             </div>
+            <?php
+                endwhile;
+
+                // Pagination
+                the_posts_pagination(array(
+                    'mid_size' => 2,
+                    'prev_text' => __('Previous', 'lucidica-portfolio'),
+                    'next_text' => __('Next', 'lucidica-portfolio'),
+                ));
+
+            else :
+                ?>
+            <p><?php _e('No projects found.', 'lucidica-portfolio'); ?></p>
+            <?php endif; ?>
 
         </div>
         <!-- <div class="button-holder">

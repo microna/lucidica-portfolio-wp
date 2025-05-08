@@ -14,13 +14,10 @@
     </div>
     <div class="container">
         <div class="hero__content">
-            <h1 class="hero__title">Lucidica</h1>
+            <h1 class="hero__title"><?php the_title(); ?></h1>
             <div class="hero__text">
                 <p>
-                    Lucidica is an IT company helping UK small and medium-sized businesses
-                    with technical challenges, innovations, and data protection. We
-                    redesigned their website to improve online presence, clarify services,
-                    and ensure a modern look.
+                    <?php the_content(); ?>
                 </p>
             </div>
             <a href="#" class="button-primary modal__btn">Contact Us</a>
@@ -33,7 +30,8 @@
 <div class=" modal__wrapper">
     <div class="modal">
         <div class="modal__close"> <img src="<?php echo get_template_directory_uri(); ?>/img/cancel.svg" alt="cancel"
-                width="10px" height="10px"></div>
+                width="10px" height="10px">
+        </div>
         <h2 class="modal__title">Contact Us</h2>
         <form class="modal__body" action="">
             <input class="modal__input" type="text" placeholder="Enter your first name">

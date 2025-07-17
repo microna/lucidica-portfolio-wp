@@ -35,14 +35,15 @@
         <div class="modal__close"> <img src="<?php echo get_template_directory_uri(); ?>/img/cancel.svg" alt="cancel"
                 width="10px" height="10px"></div>
         <h2 class="modal__title">Contact Us</h2>
-        <form class="modal__body" action="">
+        <?php echo do_shortcode('[contact-form-7 id="eed3344" title="Contact form 1"]'); ?>
+        <!-- <form class="modal__body" action="">
             <input class="modal__input" type="text" placeholder="Enter your first name">
             <input class="modal__input" type="text" placeholder="Enter your phone number">
             <input class="modal__input" type="text" placeholder="Enter your last name">
             <input class="modal__input" type="text" placeholder="Enter your email">
             <input class="modal__input" type="text" placeholder="Enter your comment">
             <input class="button-secondary modal__btn" type="submit" value="Submit">
-        </form>
+        </form> -->
 
 
     </div>
@@ -75,7 +76,7 @@
             if ($projects_query->have_posts()) :
                 while ($projects_query->have_posts()) : $projects_query->the_post();
                     // Get the featured image
-                    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'project-thumbnail ');
                     if (!$thumbnail) {
                         $thumbnail = get_template_directory_uri() . '/img/project-1.jpg'; // Fallback image
                     }

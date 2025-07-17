@@ -1,3 +1,13 @@
+/*
+THEME: Lucidica Portfolio
+AUTHOR: Stas Shokarev
+VERSION: 1.0.0
+DATE: 2025-07-17
+DESCRIPTION: This is the main CSS file for the Lucidica Portfolio theme.
+URI:https://github.com/microna
+
+
+*/
 * {
   padding: 0px;
   margin: 0px;
@@ -274,6 +284,7 @@ body.dark {
 .modal__wrapper .modal__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 10px;
 }
 
@@ -314,6 +325,10 @@ body.dark {
 
 .modal__btn {
   grid-column: span 2;
+}
+
+.button-secondary.modal__btn {
+  padding: 16px 40px;
 }
 
 .header {
@@ -892,7 +907,7 @@ body.dark {
 }
 
 .project-item {
-  padding: 80px 0 100px 80px;
+  /* padding: 80px 0 100px 80px; */
 }
 
 .project-item__content {
@@ -1510,22 +1525,28 @@ footer .ellipse-wrapper-footer div img {
 }
 
 .project-item {
-  padding: 80px 0 100px 80px;
+  /* padding: 80px 0 100px 80px; */
 }
 
-.project-item__content {
-  padding-top: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+.project-item__row {
+  display: grid;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 96px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
+
+.project-item__text {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.project-item__image img {
+  width: 90%;
+}
+
+
+
+
 
 .project-item__image img {
   border-radius: 16px;
@@ -2578,14 +2599,8 @@ footer .ellipse-wrapper-footer div img {
 .project-item {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
 
 .project-link {
   display: block;

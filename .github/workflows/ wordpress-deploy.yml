@@ -3,7 +3,7 @@ name: Deploy WordPress Theme
 on:
   push:
     branches:
-      - main  # Or your primary branch name
+      - main # Or your primary branch name
 
 jobs:
   deploy:
@@ -27,23 +27,23 @@ jobs:
             echo "Error: SSH_USER secret is not set"
             exit 1
           fi
-          
+
           if [ -z "${{ secrets.SSH_HOST }}" ]; then
             echo "Error: SSH_HOST secret is not set"
             exit 1
           fi
-          
+
           if [ -z "${{ secrets.SSH_PASSWORD }}" ]; then
             echo "Error: SSH_PASSWORD secret is not set"
             exit 1
           fi
-          
+
           echo "Deploying to ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/"
-          
+
           sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".gitignore" \
-            ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/"
+            theme/lucidica-portfolio/ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio.lucidica.co.uk/public_html/wp-content/themes/lucidica-portfolio/"

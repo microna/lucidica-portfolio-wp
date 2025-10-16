@@ -33,7 +33,7 @@
                 width="10px" height="10px">
         </div>
         <h2 class="modal__title">Contact Us</h2>
-        <?php echo do_shortcode('[contact-form-7 id="eed3344" title="Contact form 1"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="bb69b8d" title="Contact form 1"]'); ?>
 
 
     </div>
@@ -42,13 +42,12 @@
 
 <section class="project-item">
     <div class="container">
-        <h2 class="hero__title">Design Process</h2>
+
 
         <?php 
         // Check if the flexible content field has data
         if( have_rows('design_process') ): 
-
-            
+            echo '<h2 class="hero__title">Design Process</h2>';            
             // Loop through the flexible content rows
             while( have_rows('design_process') ): the_row();
                 

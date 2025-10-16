@@ -15,7 +15,7 @@
     </div>
     <div class="container">
         <div class="hero__content">
-            <h1 class="hero__title fade-in-delay-1">Our Expertise in Action</h1>
+            <h1 class="hero__title fade-in-delay-1">Our Expertise in Action 1</h1>
 
             <p class="hero__text fade-in-delay-3">
                 Every project is a chance to craft something unique and memorable. We

@@ -91,7 +91,7 @@
                             <p class="challenges__info-value"><?php echo esc_html($launch_year); ?></p>
                         </div>
 
-                        <a href="<?php echo esc_url($website_url); ?>" target="_blank" class="challenges__button">
+                        <a href="<?php echo esc_url($website_url); ?>" target="_blank" class="button-primary">
                             <span>Go to website</span>
                             <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward-white.svg"
                                 alt="arrow" width="16" height="16">
@@ -297,7 +297,8 @@ endif;
             <h2 class="cta-want-one__title">Want One?</h2>
             <a href="<?php echo get_field('cta_button_link') ?: '#'; ?>" class="cta-want-one__button">
                 <span><?php echo get_field('cta_button_text') ?: 'Quick free consultation'; ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward-white.svg" alt="arrow" width="16" height="16">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward-white.svg" alt="arrow"
+                    width="16" height="16">
             </a>
         </div>
     </div>

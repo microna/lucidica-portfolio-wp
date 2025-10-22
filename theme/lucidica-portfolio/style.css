@@ -106,6 +106,7 @@ h6 {
 
 /* ===== BUTTONS ===== */
 .button-primary {
+  display: inline-block !important;
   background-color: #ffffff;
   color: #0058e6;
   padding: 16px 48px 16px 16px;
@@ -114,7 +115,7 @@ h6 {
   font-size: 16px;
   position: relative;
   transition: 0.1s ease-in;
-  display: inline-block;
+
 }
 
 .button-primary:after {
@@ -418,7 +419,7 @@ textarea.modal__input {
 }
 
 .hero__title {
-  font-size: clamp(40px, 8vw, 100px);
+  font-size: clamp(48px, 10vw, 128px);
   font-weight: 700;
   font-family: "Inter", sans-serif;
   padding-bottom: 56px;
@@ -445,7 +446,7 @@ textarea.modal__input {
 .projects__content-title,
 .portfolio__content-title {
   max-width: 550px;
-  font-size: clamp(45px, 8vw, 100px);
+      font-size: clamp(48px, 10vw, 128px);
   font-weight: 700;
   font-family: "Inter", sans-serif;
 }
@@ -575,7 +576,7 @@ textarea.modal__input {
 }
 
 .impact__content-title {
-  font-size: clamp(45px, 8vw, 100px);
+      font-size: clamp(48px, 10vw, 128px);
   font-weight: 700;
   font-family: "Inter", sans-serif;
   padding-bottom: 56px;
@@ -1329,6 +1330,7 @@ footer .ellipse-wrapper-footer div img {
   transition: all 0.3s ease;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
   min-height: 52px;
+  width: 100%;
 }
 
 .cta-want-one__button:hover {
@@ -1443,6 +1445,12 @@ footer .ellipse-wrapper-footer div img {
   gap: 24px;
   width: 241px;
   flex-shrink: 0;
+  align-items: flex-start;
+}
+
+.challenges__sidebar .button-primary {
+  width: auto !important;
+  display: inline-flex !important;
 }
 
 .challenges__info-item {
@@ -1911,11 +1919,6 @@ footer .ellipse-wrapper-footer div img {
 
   .cta-want-one__wrapper {
     gap: 30px;
-  }
-
-  .cta-want-one__button {
-    width: 100%;
-    max-width: 300px;
   }
 
   /* Challenges section mobile */

@@ -53,12 +53,10 @@
 <section class="projects">
     <div class="container">
         <div class="projects__content portfolio__content">
-            <h2 class="projects__content-title portfolio__content-title">
-                Proud
-                Projects -
-            </h2>
-            <span class="projects__content-text portfolio__content-text">clients trust Lucidica, and we<br />
-                value each one of them.</span>
+            <h2 class="projects__content-title portfolio__content-title">Proud Projects -</h2>
+            <span class="projects__content-text portfolio__content-text">clients trust Lucidica, and we value each one
+
+                of them.</span>
         </div>
     </div>
     <div class="swiper projects__slider">
@@ -108,29 +106,25 @@
                 <div class="impact__blocks-item">
                     <h6 class="impact__blocks-item__title">25+</h6>
                     <p class="impact__blocks-item__text">
-                        Years of seccsefull collaborations worldwide - helping businesses
-                        scale and grow
+                        Years of successful collaboration worldwide - helping businesses scale and grow.
                     </p>
                 </div>
                 <div class="impact__blocks-item">
                     <h6 class="impact__blocks-item__title">100%</h6>
                     <p class="impact__blocks-item__text">
-                        Individual approach to each project – we create solutions tailored
-                        to your business goals.
+                        Individual approach to each project – we create solutions tailored to your business goals.
                     </p>
                 </div>
-                <div class="impact__blocks-item">
+                <div class="impact__blocks-item impact__blocks-item--featured">
                     <h6 class="impact__blocks-item__title">90%</h6>
                     <p class="impact__blocks-item__text">
-                        Of clients become our friends and return to us again – based on
-                        trust and quality.
+                        Of clients become our friends and return to us again – based on trust and quality.
                     </p>
                 </div>
                 <div class="impact__blocks-item">
                     <h6 class="impact__blocks-item__title">50+</h6>
                     <p class="impact__blocks-item__text">
-                        Completed web projects – from landing pages to complex platforms
-                        with deep integration.
+                        Completed web projects – from landing pages to complex platforms with deep integration.
                     </p>
                 </div>
             </div>

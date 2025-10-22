@@ -445,18 +445,20 @@ textarea.modal__input {
 
 .projects__content-title,
 .portfolio__content-title {
-  max-width: 550px;
-      font-size: clamp(48px, 10vw, 128px);
+  max-width: 648px;
+  font-size: clamp(48px, 10vw, 128px);
   font-weight: 700;
   font-family: "Inter", sans-serif;
 }
 
 .projects__content-text,
 .portfolio__content-text {
-  font-size: clamp(18px, 4vw, 28px);
-  font-weight: 400;
+  font-size: clamp(18px, 3vw, 32px);
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
   margin-bottom: 20px;
   position: relative;
+  max-width: 479px;
 }
 
 .projects__content-text:after,
@@ -558,7 +560,7 @@ textarea.modal__input {
   min-width: 250px;
 }
 
-.impact__blocks-item:nth-child(3) {
+.impact__blocks-item--featured {
   background-color: #0058e6;
   color: #ffffff;
 }
@@ -576,7 +578,7 @@ textarea.modal__input {
 }
 
 .impact__content-title {
-      font-size: clamp(48px, 10vw, 128px);
+  font-size: clamp(48px, 10vw, 128px);
   font-weight: 700;
   font-family: "Inter", sans-serif;
   padding-bottom: 56px;

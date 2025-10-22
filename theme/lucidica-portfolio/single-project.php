@@ -125,11 +125,6 @@ if( have_rows('design_process_sections') ):
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>">
-    <?php if( $show_main_title && $index === 0 ): ?>
-    <div class="design-process-wireframes__underline">
-    </div>
-    <?php endif; ?>
-
     <div class="container">
         <div class="design-process-wireframes__wrapper">
             <?php if( $show_main_title && $index === 0 ): ?>
@@ -176,16 +171,11 @@ if( have_rows('technical_process_sections') ):
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>">
-    <?php if( $show_main_title && $index === 0 ): ?>
-    <div class="design-process-wireframes__underline">
-        <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/blue-underline.svg" alt=""> -->
-    </div>
-    <?php endif; ?>
-
     <div class="container">
         <div class="design-process-wireframes__wrapper">
             <?php if( $show_main_title && $index === 0 ): ?>
             <h2 class="design-process-wireframes__title">Technical Process</h2>
+
             <?php endif; ?>
 
             <div class="design-process-wireframes__content">
@@ -227,16 +217,10 @@ if( have_rows('project_overview_sections') ):
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>">
-    <?php if( $show_main_title && $index === 0 ): ?>
-    <div class="design-process-wireframes__underline">
-        <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/blue-underline.svg" alt=""> -->
-    </div>
-    <?php endif; ?>
-
     <div class="container">
         <div class="design-process-wireframes__wrapper">
             <?php if( $show_main_title && $index === 0 ): ?>
-            <h2 class="design-process-wireframes__title">Project overview </h2>
+            <h2 class="design-process-wireframes__title">Project overview</h2>
             <?php endif; ?>
 
             <div class="design-process-wireframes__content">
@@ -305,6 +289,19 @@ endif;
     </div>
 </section>
 
+
+<!-- CTA Section - Want One? -->
+<section class="cta-want-one">
+    <div class="container">
+        <div class="cta-want-one__wrapper">
+            <h2 class="cta-want-one__title">Want One?</h2>
+            <a href="<?php echo get_field('cta_button_link') ?: '#'; ?>" class="cta-want-one__button">
+                <span><?php echo get_field('cta_button_text') ?: 'Quick free consultation'; ?></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward-white.svg" alt="arrow" width="16" height="16">
+            </a>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>

@@ -477,7 +477,7 @@ textarea.modal__input {
 }
 
 .projects__slider {
-  padding: 104px 0;
+  padding: 40px 0 !important;
 }
 
 .projects__slider .swiper {
@@ -507,6 +507,7 @@ textarea.modal__input {
 }
 
 .projects__slider-title {
+  padding: 10px 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -545,7 +546,7 @@ textarea.modal__input {
 
 .impact__blocks {
   max-width: 550px;
-   display: flex;
+  display: flex;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 12px;

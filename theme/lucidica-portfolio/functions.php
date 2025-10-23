@@ -4,7 +4,7 @@ function get_lucidica_portfolio_styles() {
         'lucidica-portfolio-styles', // Handle
         get_stylesheet_directory_uri() . '/style.css', // Path to style.css in root folder
         array(), // Dependencies
-        '1.0.0', // Version
+        filemtime(get_stylesheet_directory() . '/style.css'), // Version based on file modification time
         'all' // Media
     );
     
@@ -50,7 +50,8 @@ function get_lucidica_portfolio_scripts() {
 function lucidica_fix_background_image_urls($tag, $handle, $src) {
     // Only modify our theme's stylesheet
     if ($handle === 'lucidica-portfolio-styles') {
-        $css_content = file_get_contents(get_stylesheet_directory() . '/style.css');
+        $css_file = get_stylesheet_directory() . '/style.css';
+        $css_content = file_get_contents($css_file);
         $fixed_css = str_replace('url(./img/', 'url(' . get_stylesheet_directory_uri() . '/img/', $css_content);
         
         // Create a temporary file with the fixed CSS
@@ -58,8 +59,10 @@ function lucidica_fix_background_image_urls($tag, $handle, $src) {
         $temp_file = $upload_dir['basedir'] . '/lucidica-fixed-style.css';
         file_put_contents($temp_file, $fixed_css);
         
-        // Return tag pointing to the fixed CSS
-        return str_replace($src, $upload_dir['baseurl'] . '/lucidica-fixed-style.css', $tag);
+        // Return tag pointing to the fixed CSS with version parameter
+        $version = filemtime($css_file);
+        $cached_url = $upload_dir['baseurl'] . '/lucidica-fixed-style.css?ver=' . $version;
+        return str_replace($src, $cached_url, $tag);
     }
     return $tag;
 }

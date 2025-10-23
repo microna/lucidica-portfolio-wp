@@ -426,7 +426,7 @@ textarea.modal__input {
 }
 
 .hero__text {
-  max-width: 552px;
+  max-width: 60%;
   font-size: clamp(18px, 3vw, 24px);
   padding-bottom: 50px;
 }

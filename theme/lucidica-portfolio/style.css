@@ -540,11 +540,12 @@ textarea.modal__input {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 121px;
+  gap: 123px;
 }
 
 .impact__blocks {
-  display: flex;
+  max-width: 550px;
+   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 12px;

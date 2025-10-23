@@ -82,8 +82,8 @@
             <div class="swiper-slide projects__slider-item">
                 <img class="projects__slider-img" src="<?php echo esc_url($thumbnail); ?>"
                     alt="<?php echo esc_attr(get_the_title()); ?>" />
-                <h5 class="projects__slider-title"><?php echo esc_html(get_the_title()); ?></h5>
-                <p class="projects__slider-text">
+                <h5 class="project__item-subtitle"><?php echo esc_html(get_the_title()); ?></h5>
+                <p class=" projects__slider-text">
                     <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                 </p>
             </div>

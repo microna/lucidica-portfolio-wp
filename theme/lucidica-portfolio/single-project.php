@@ -2,13 +2,13 @@
 
 
 <section class="hero">
-    <div class="ellipse ellipse--top-left">
+    <div class="ellipse ellipse__position--top-left">
         <img src="<?php echo get_template_directory_uri(); ?>/img/ellipse/Ellipse 2.svg" alt="">
     </div>
-    <div class="ellipse ellipse--top-right">
+    <div class="ellipse ellipse__position--top-right">
         <img src="<?php echo get_template_directory_uri(); ?>/img/ellipse/Ellipse 1.svg" alt="">
     </div>
-    <div class="ellipse ellipse--top-center">
+    <div class="ellipse ellipse__position--top-center">
         <img src="<?php echo get_template_directory_uri(); ?>/img/ellipse/Ellipse 3.svg" alt="">
     </div>
     </div>

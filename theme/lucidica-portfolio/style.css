@@ -41,6 +41,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  padding-top: 80px;
 }
 
 body.locked {
@@ -219,7 +220,7 @@ h6 {
 
 /* ===== DECORATIVE ELEMENTS ===== */
 .ellipse-wrapper {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   top: 0;
   left: 0;
@@ -410,8 +411,9 @@ textarea.modal__input {
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;
-  padding: 120px 0 155px 0;
+  padding: 40px 0 155px 0;
   z-index: 1;
+  overflow: visible;
 }
 
 .hero__content {
@@ -1656,8 +1658,12 @@ footer .ellipse-wrapper-footer div img {
 
   /* Hero */
   .hero {
-    padding: 80px 0 60px 0;
+    padding: 20px 0 60px 0;
     text-align: center;
+  }
+
+  body {
+    padding-top: 60px;
   }
 
   .hero__content {
@@ -1973,7 +1979,11 @@ footer .ellipse-wrapper-footer div img {
 
   /* Hero adjustments */
   .hero {
-    padding: 60px 0 40px 0;
+    padding: 20px 0 40px 0;
+  }
+
+  body {
+    padding-top: 40px;
   }
 
   .hero__content {
@@ -2249,8 +2259,12 @@ footer .ellipse-wrapper-footer div img {
 /* Extra small screens (360px and below) */
 @media (max-width: 359.98px) {
 
+  body {
+    padding-top: 30px;
+  }
+
   .hero {
-    padding: 50px 0 30px 0;
+    padding: 20px 0 30px 0;
   }
 
   .hero__title {

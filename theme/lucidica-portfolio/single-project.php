@@ -295,7 +295,8 @@ endif;
     <div class="container">
         <div class="cta-want-one__wrapper">
             <h2 class="cta-want-one__title">Want One?</h2>
-            <a href="<?php echo get_field('cta_button_link') ?: '#'; ?>" class="button-primary">
+            <a href="<?php echo get_field('cta_button_link') ?: 'https://calendly.com/valentyna-mostipan-lucidica/30min'; ?>"
+                class="button-primary">
                 <span><?php echo get_field('cta_button_text') ?: 'Quick free consultation'; ?></span>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward-white.svg" alt="arrow"
                     width="16" height="16">

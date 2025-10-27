@@ -398,6 +398,29 @@ textarea.modal__input {
   gap: 16px;
 }
 
+/* Two-column layout for name and contact fields */
+.wpcf7-form p {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0;
+}
+
+.wpcf7-form p .wpcf7-form-control-wrap {
+  width: 50%;
+}
+
+/* Full width for textarea and submit */
+.wpcf7-form p:has(textarea),
+.wpcf7-form p:has(input[type="submit"]) {
+  display: block;
+}
+
+.wpcf7-form p:has(textarea) .wpcf7-form-control-wrap,
+.wpcf7-form p:has(input[type="submit"]) .wpcf7-form-control-wrap {
+  width: 100%;
+}
+
 .wpcf7-form input,
 .wpcf7-form textarea {
   width: 100%;
@@ -1654,6 +1677,16 @@ footer .ellipse-wrapper-footer div img {
 
   .modal__wrapper .modal__title {
     font-size: 28px;
+  }
+
+  /* Make form fields stack on tablets */
+  .wpcf7-form p {
+    display: block !important;
+  }
+
+  .wpcf7-form p .wpcf7-form-control-wrap {
+    width: 100% !important;
+    margin-bottom: 16px;
   }
 
   /* Hero */

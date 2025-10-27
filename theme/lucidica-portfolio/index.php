@@ -174,8 +174,7 @@
                 </div>
                 <div class="testimonials__slider-text">
                     "Lucidica understands small businesses from one person start-ups to growing SMEs.
-                    It's this combined with their passion for IT and their personable, friendly team that make them
-                    stand out. I've used their services from IT support..."
+                    It's this combined with..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -203,9 +202,7 @@
                 </div>
                 <div class="testimonials__slider-text">
                     "The seminar gave me an appetite to improve my IT facilities and website. The afternoon was full of
-                    interesting facts and information that I found was all relevant to running my business. It was well
-                    worth the money and I'd recommend these seminars to anyone looking to make the most of their
-                    business."
+                    interesting..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -233,9 +230,7 @@
                 <div class=" testimonials__slider-text">
                     "We highly recommend Lucidica. We do not have in house IT and I have to say the response time,
                     the
-                    assistance, the support and professionalism from all the team at Lucida are excellent. All
-                    issues
-                    are dealt with very quickly. I cannot fault Lucidica at all."
+                    assistance..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -262,9 +257,7 @@
                 <div class="testimonials__slider-text">
                     "We have used Lucidica as our IT support for several years and are very happy with the service
                     they
-                    provide. Not only do they handle our day to day enquires efficiently, Lucidica have helped us
-                    with
-                    large tasks such as changing document management platforms and a major IT security update."
+                    provide..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -291,7 +284,7 @@
                 <div class="testimonials__slider-text">
                     "To me, they are an extension of my own business and it's what I value most. I can't recommend
                     their
-                    people and services more highly."
+                    people and services..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -317,9 +310,7 @@
                 </div>
                 <div class="testimonials__slider-text">
                     "Lucidica helped Plus X to combine data from various cloud platforms and migrate safely to
-                    Microsoft365. Microsoft Teams, in particular, has proved extremely effective in helping our team
-                    to
-                    collaborate across our various locations."
+                    Microsoft365..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>
@@ -345,9 +336,7 @@
                 </div>
                 <div class="testimonials__slider-text">
                     "I've been a customer of Lucidica for nearly five years and have found them to be consistent,
-                    patient and efficient. They've supported my business with every type of IT enquiry and have been
-                    reliable in their delivery of service. I've been impressed by their aftercare consultative
-                    approach."
+                    patient and efficient..."
                 </div>
                 <a href="https://www.cloudtango.net/providers/4321/lucidica#comments" class="button-secondary">Read
                     More</a>

@@ -545,7 +545,7 @@ textarea.modal__input {
 
 .impact__wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 123px;
 }
